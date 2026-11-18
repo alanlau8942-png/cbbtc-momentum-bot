@@ -17,7 +17,7 @@ Rules (all in integer basis points, computed from closes only):
       Both windows must agree, so a one-hour bounce that is already fading on
       the 30-minute window does not trigger a buy.
   Exit (holding), sell the whole position when any of these holds:
-      - 60-bar momentum < -50 bps (the 1-hour trend reversed);
+      - 60-bar momentum < -25 bps (the 1-hour trend reversed);
       - position value <= 98.5% of its peak value (150 bps trailing stop);
       - position value <= 98% of its cost (200 bps hard stop, a safety net
         against a flash crash; the trend-reversal exit normally fires first).
@@ -44,7 +44,7 @@ LONG_N = 60            # long momentum window, in bars (1 hour)
 LONG_ENTRY_BPS = 50    # enter when the 60-bar rise is at least this
 SHORT_N = 30           # confirmation window, in bars (30 minutes)
 SHORT_ENTRY_BPS = 30   # ... and the 30-bar rise is at least this
-EXIT_MOM_BPS = -50     # exit when the 60-bar momentum falls below this
+EXIT_MOM_BPS = -25     # exit when the 60-bar momentum falls below this
 TRAIL_BPS = 150        # trailing stop: sell 150 bps below the peak value
 HARD_STOP_BPS = 200    # hard stop: sell 200 bps below cost
 MAX_SLIPPAGE_BPS = 100  # 1% past the close an order was decided on

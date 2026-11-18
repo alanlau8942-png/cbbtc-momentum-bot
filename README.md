@@ -11,7 +11,7 @@ cost, so fast signals whipsaw. This bot waits for a real multi-hour trend:
 
 - **Buy** (full equity) when the 60-bar momentum is ≥ +50 bps **and** the
   30-bar momentum is ≥ +30 bps — both windows must agree.
-- **Sell** the whole position when the 60-bar momentum falls below −50 bps
+- **Sell** the whole position when the 60-bar momentum falls below −25 bps
   (trend reversed), or on a 150 bps trailing stop from the peak value, or on
   a 200 bps hard stop below cost.
 - Orders cap slippage at 100 bps past the close they were decided on.
